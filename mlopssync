@@ -44,7 +44,7 @@ if [ "$secsup" == "" ]; then
 fi
 
 #-- If uptime is under five minutes (300 seconds), restore users and keys
-if (( $secsup < 30000 )); then
+if (( $secsup < 300 )); then
 
    #-- Create authorized_keys file with Andrew's and Jake's public keys to access student-admin account
    echo "#Default user" > /tmp/authorized_keys
